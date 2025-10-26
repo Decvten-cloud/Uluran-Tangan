@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donasi Online</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="../js/donsikonten.js"></script>
+  <link rel="stylesheet" href="../css/donasikonten.css">
+   <!-- font -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="{{ url_for('static', filename='donasikonten.css') }}">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg  fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">UluranTangan</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" style="color: black;" href="{{url_for('beranda')}}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{url_for('donasi')}}">Donasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('tentang_kami')}}">Tentang Kami</a>
+                    </li>
+                </ul>
+                {% if not session['user_id'] %}
+                <div class="button">
+                    <a href="{{url_for('daftar')}}" class="btn btn-light button-daftar"  >Daftar<a>
+                    <a href="{{url_for('login')}}" class="btn btn-light button-masuk" >Masuk</a>
+                </div>
+                {% elif session['user_id'] %}
+                <div class="user-actions">
+                    <!-- Logout Section -->
+                    <div class="button">
+                        <a href="{{url_for('logout')}}" class="btn btn-light button-masuk" >LogOut</a>
+                
+                    <!-- Profile Button -->
+                    <a href="{{ url_for('profil') }}" class="profile-button">
+                        <img src="{{ url_for('static', filename='images/gg_profile.png') }}" alt="Profile Logo">
+                    </a>
+                </div>
+                
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+
+  <div class="container" style="margin-top: 5rem; margin-bottom: 5rem;">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="donation-card">
+          <!-- Header -->
+          <h4 class="donation-title" style="color: #00A7A5;">Kamu Akan Berdonasi</h4>
+          <div class="row">
+            <!-- Image -->
+            <div class="col-md-6">
+              <img src="{{ url_for('static', filename='images/kontainer3.png') }}" alt="Gambar Donasi" class="img-fluid rounded">
+            </div>
+            <!-- Info -->
+            <div class="col-md-6" >
+              <p style="font-weight: 500;">Donasi Anda akan digunakan untuk:</p>
+              <ul style="margin-bottom: 5rem; font-weight: 500;">
+                <li>Memberikan perlengkapan sekolah yang layak.</li>
+                <li>Memberikan dukungan tambahan seperti makanan bergizi untuk membantu mereka belajar dengan fokus.</li>
+              </ul>
+              
+              <h5 class="text-warning fw-bold"><strong>Rp. 7.000.000</strong></h5>
+              <div class="progress" style="background-color: rgb(148,240,240,0.30); border-radius: 10px;">
+                <div class="progress-bar" role="progressbar" style="width: 40%; background-color: rgb(140,240,240); border-radius: 10px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+              <p class="mt-2">10 Hari lagi</p>
+            </div>
+          </div>
+
+          <hr>
+      <form method="POST">
+          <!-- Pilih Nominal -->
+          <h6 class="mb-3">Pilih Nominal Donasi</h6>
+          <div class="donation-btn-group d-flex flex-wrap gap-2">
+              <select class="form-select" name="button">
+                  <!-- Opsi pertama sebagai placeholder -->
+                  <option class="btn btn-outline-secondary" value="" disabled selected>Pilih Nominal</option>
+                  
+                  <!-- Opsi nominal donasi -->
+                  <option class="btn btn-outline-secondary" value="1000">Rp. 1.000</option>
+                  <option class="btn btn-outline-secondary" value="5000">Rp. 5.000</option>
+                  <option class="btn btn-outline-secondary" value="10000">Rp. 10.000</option>
+                  <option class="btn btn-outline-secondary" value="50000">Rp. 50.000</option>
+                  <option class="btn btn-outline-secondary" value="100000">Rp. 100.000</option>
+                  <option class="btn btn-outline-secondary" value="200000">Rp. 200.000</option>
+                  <option class="btn btn-outline-secondary" value="300000">Rp. 300.000</option>
+                  <option class="btn btn-outline-secondary" value="400000">Rp. 400.000</option>
+                  <option class="btn btn-outline-secondary" value="500000">Rp. 500.000</option>
+              </select>
+          </div>
+          
+          <div class="mt-3">
+            <label for="customAmount" class="form-label">Atau nominal donasi lainnya</label>
+            <input type="text" name="nominal" id="customAmount" class="form-control" placeholder="Rp. 5.000">
+          </div>
+
+          <hr>
+
+          <!-- Data Donatur -->
+          <h6 class="mb-3">Data Donatur</h6>
+          <div class="mb-3">
+            <label for="donorName" class="form-label">Nama (opsional)</label>
+            <input type="text" name="donorName" id="donorName" class="form-control" placeholder="Nama Anda">
+          </div>
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="anonymousDonation">
+            <label class="form-check-label" for="anonymousDonation">
+              Sembunyikan nama saya (donasi anonim)
+            </label>
+          </div>
+          <div class="mb-4">
+            <label for="donorMessage" class="form-label">Memberikan pesan (opsional)</label>
+            <textarea id="donorMessage" name="donorMessage" class="form-control" rows="3" placeholder="Tulis pesan Anda"></textarea>
+          </div>
+
+          <!-- Tombol Donasi -->
+          <button type="submit" class="btn btn-donate w-100">Donasikan Sekarang</button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  
+</body>
+</html>

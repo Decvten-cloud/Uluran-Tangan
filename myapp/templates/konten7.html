@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konten1</title>
+    <!-- Link Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/konten1.css">
+     <!-- font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="{{ url_for('static', filename='konten1.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg  fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">UluranTangan</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" style="color: black;" href="{{url_for('beranda')}}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{url_for('donasi')}}">Donasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('tentang_kami')}}">Tentang Kami</a>
+                    </li>
+                </ul>
+                {% if not session['user_id'] %}
+                <div class="button">
+                    <a href="{{url_for('daftar')}}" class="btn btn-light button-daftar"  >Daftar<a>
+                    <a href="{{url_for('login')}}" class="btn btn-light button-masuk" >Masuk</a>
+                </div>
+                {% elif session['user_id'] %}
+                <div class="user-actions">
+                    <!-- Logout Section -->
+                    <div class="button">
+                        <a href="{{url_for('logout')}}" class="btn btn-light button-masuk" >LogOut</a>
+                
+                    <!-- Profile Button -->
+                    <a href="{{ url_for('profil') }}" class="profile-button">
+                        <img src="{{ url_for('static', filename='images/gg_profile.png') }}" alt="Profile Logo">
+                    </a>
+                </div>
+                
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container donation-container " style="padding-top: 5rem;">
+        <div class="row">
+            <!-- Kolom Gambar dan Deskripsi -->
+            <div class="col-md-7">
+                <div class="card mb-3">
+                    <img src="{{ url_for('static', filename='images/kontainer7.png') }}" alt="Gambar Donasi" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-weight: 700; color: #00A7A5; margin: 2rem 0 ;">Deskripsi :</h5>
+                        <p>
+                            Saat ini, jutaan orang di berbagai belahan dunia, termasuk anak-anak, ibu hamil, dan lansia, tengah menghadapi krisis pangan yang sangat mengkhawatirkan. Kekurangan makanan akibat konflik, perubahan iklim, atau kemiskinan ekstrem telah mengakibatkan meningkatnya kelaparan, gizi buruk, bahkan kematian. Mereka membutuhkan uluran tangan kita untuk bertahan hidup dan bangkit dari kondisi ini.
+                        </p>
+                        <p>
+                            Mengapa Kita Harus Peduli?Makanan adalah kebutuhan dasar setiap manusia. Ketika seseorang tidak dapat memenuhi kebutuhan ini, mereka tidak hanya kehilangan kesehatan tetapi juga harapan. Dengan membantu mereka yang mengalami kelaparan, kita memberikan kesempatan bagi mereka untuk hidup dengan martabat dan membangun masa depan yang lebih baik. Berbagi kepada mereka yang membutuhkan adalah wujud kemanusiaan sejati dan kepedulian kita terhadap sesama.
+                        </p>
+                        <p>
+                            Ayo, jadilah bagian dari solusi krisis pangan ini !
+                            Berbagi makanan adalah berbagi kehidupan. Jadilah harapan bagi mereka yang membutuhkan. Klik tombol donasi sekarang, dan bersama-sama kita atasi krisis pangan ini.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Kolom Donasi -->
+            <div class="col-md-5">
+                <div class="donation-info">
+                    <h5 class="text-dark">Dana Terkumpul</h5>
+                    <h2 class="text-warning fw-bold">Rp. 4.000.000</h2>
+                    <p class="text-muted">dari target Rp. 20.000.000</p>
+                    <div class="progress mb-3" style="background-color: rgb(148,240,240,0.30); border-radius: 10px;">
+                        <div class="progress-bar" role="progressbar" style="width: 20%; background-color: rgb(140,240,240); border-radius: 10px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <a href="{{url_for('donasikonten7')}}"><button class="btn w-100 mb-2" style="background-color: #138B8B;color: #ffff;">Donasi</button></a>
+                    <!-- Daftar Donasi -->
+                    <h6 class="mb-4 mt-3" style="color: rgb(0, 0, 0, 0.5);">Donatur</h6>
+                    <div class="donation-list">
+                        <div class="donasi-list pb-3" >
+                            <img src="{{ url_for('static', filename='images/gg_profile.png') }}" alt="profil"  style="width:50px; margin-right:15px;"> <span>Rp. 50.000 Oleh #Sahabat UluranTanagn</span>
+                        </div>
+                        <div class="donasi-list pb-3" >
+                            <img src="{{ url_for('static', filename='images/gg_profile.png') }}" alt="profil"  style="width:50px; margin-right:15px;"> <span>Rp. 50.000 Oleh #Sahabat UluranTanagn</span>
+                        </div>
+                        <div class="donasi-list pb-3" >
+                            <img src="{{ url_for('static', filename='images/gg_profile.png') }}" alt="profil"  style="width:50px; margin-right:15px;"> <span>Rp. 50.000 Oleh #Sahabat UluranTanagn</span>
+                        </div>
+                        <div class="donasi-list pb-3" >
+                            <img src="{{ url_for('static', filename='images/gg_profile.png') }}" alt="profil"  style="width:50px; margin-right:15px;"> <span>Rp. 50.000 Oleh #Sahabat UluranTanagn</span>
+                        </div>
+                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

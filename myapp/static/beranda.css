@@ -1,0 +1,188 @@
+body{
+    background-color: #EEEEEE;
+    font-family: "poppins", serif;
+    margin-top: 60px;
+  }
+ 
+  .navbar {
+    background-color: #EEEEEE; 
+    color: #000;
+    opacity: 0.97;
+    backdrop-filter: blur(100px); 
+    border-bottom: 1.5px solid rgb(0,167,165);
+   
+  }
+  .navbar-brand{
+    font-weight: bold;
+    color: #00A7A5;
+    
+    
+  }
+  .navbar .nav-link {
+    color: black; 
+  }
+  .navbar .nav-link:hover {
+    font-weight: 700; 
+  }
+  
+  .nav-link.active{
+    font-weight: 700;
+  }
+  
+  .button-masuk{
+    width: 100px;
+    height: 40px;
+    background-color: #138B8B;
+    color: #ffff;
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 10px;
+  
+  }
+  .button-daftar{
+    width: 100px;
+    height: 40px;
+    background-color: transparent;
+    color: #000;
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 10px;
+  
+  }
+  
+
+  .bg-container {
+     height: 100vh;
+     background-image: url('{{ url_for("static", filename="images/bg-tentang0kami.png") }}');
+     background-size: cover;
+     background-position: center;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+  }
+
+  .bg-container2 {
+     height: 100vh;
+     background-image: url('{{ url_for("static", filename="images/kontainer4.png") }}');
+     background-size: cover;
+     background-position: center;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+  }
+
+  
+  
+  .image-container img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 8px; 
+  }
+  
+  .konten1 h4{
+    margin-bottom: 2rem;
+  }
+  .konten1 p{
+    font-size: 30px;
+  }
+  .button-donasi{
+    width: 200px;
+    height: 40px;
+    margin: 2.5rem;
+    background-color: #138B8B;
+    color: #ffff;
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+  .card .footer {
+    
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    background-color: transparent;
+    color: rgb(0,0,0,0.5);
+    font-size: 0.7rem;
+    
+}
+
+.custom-bg {
+    background-color: #138B8B; 
+    color: white; 
+    padding: 30px;
+    border-radius: 10px;
+    margin: 2rem;
+}
+.section-title h3{
+    padding: 2rem;
+}
+.custom-card {
+    text-align: center; 
+    padding: 15px;
+    border-right: 1px solid white; 
+}
+.custom-card2 {
+    text-align: center; 
+    padding: 15px;
+    
+}
+.custom-heading {
+    font-weight: bold; 
+    margin-bottom: 10px;
+}
+.section-title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.custom-card p{
+    color: #000;
+    
+}
+.custom-card2 p{
+    color: #000;
+    
+}
+.section-title p{
+    padding: 20px;
+
+}
+.container-custom{
+    background-color: #ffff;
+    height: 60vh;
+    align-items: center;
+    
+}
+.button-profil {
+  /*display: flex;
+  justify-content: center;
+  align-items: center;*/
+  cursor: pointer;
+  width: 50px;
+  height: 40px;
+  background-color: transparent;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+}
+
+.button-profil img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.button-profil img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
