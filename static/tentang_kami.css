@@ -1,0 +1,101 @@
+body{
+  background-color: #EEEEEE;
+  font-family: "poppins", serif;
+}
+
+.navbar {
+  background-color: #EEEEEE; 
+  color: #000;
+  opacity: 0.97;
+  backdrop-filter: blur(100px); 
+  border-bottom: 1.5px solid rgb(0,167,165);
+ 
+}
+.navbar-brand{
+  font-weight: bold;
+  color: #00A7A5;
+  
+  
+}
+.navbar .nav-link {
+  color: black; 
+}
+.navbar .nav-link:hover {
+  font-weight: 700; 
+}
+
+.nav-link.active{
+  font-weight: 700;
+}
+
+.button-masuk{
+  width: 100px;
+  height: 40px;
+  background-color: #138B8B;
+  color: #ffff;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 10px;
+
+}
+.button-daftar{
+  width: 100px;
+  height: 40px;
+  background-color: transparent;
+  color: #000;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 10px;
+
+}
+
+.bg-container {
+  height: 100vh;
+  background-image: url('../img/bg-tentang0kami.png'); 
+  background-size: cover; 
+  background-position: center;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  position: relative;
+}
+.bg-container2 {
+  height: 100vh;
+  background-image: url('../img/bg-tentangkmi2.png'); 
+  background-size: cover; 
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+
+.image-container img {
+  width: 100%; 
+  height: auto; 
+  border-radius: 8px; 
+}
+
+.konten1 h2{
+  text-align: center;
+  margin: 2rem;
+  font-weight: bold;
+}
+.konten1 p{
+  margin: 2rem;
+  font-size: 30px;
+}
+
+
+.konten2 h2{
+  margin: 2rem;
+  font-weight: 700;
+}
+
+.konten2 li{
+  margin: 10px;
+  font-size: 24px;
+}

@@ -1,0 +1,76 @@
+body{
+  background-color: #EEEEEE;
+  font-family: "poppins", serif;
+}
+
+.navbar {
+  background-color: #EEEEEE; 
+  color: #000;
+  opacity: 0.97;
+  backdrop-filter: blur(100px); 
+  border-bottom: 1.5px solid rgb(0,167,165);
+}
+.navbar-brand{
+  font-weight: bold;
+  color: #00A7A5;
+}
+.navbar .nav-link {
+  color: black; 
+}
+.navbar .nav-link:hover {
+  font-weight: 700; 
+}
+
+.nav-link.active{
+  font-weight: 700;
+}
+
+.button-masuk{
+  width: 100px;
+  height: 40px;
+  background-color: #138B8B;
+  color: #ffff;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 10px;
+
+}
+.button-daftar{
+  width: 100px;
+  height: 40px;
+  background-color: transparent;
+  color: #000;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 10px;
+}
+  
+.bg-container {
+  height: 50vh;
+  background-image: url('../static/images/bg-donasi.png');
+  background-size: cover; 
+  background-position: center;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.bg-container h2{
+  color: white;
+  font-weight: 700;
+  justify-content: center;
+  display: flex;
+}
+
+.card .footer {   
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  background-color: transparent;
+  color: rgb(0,0,0,0.5);
+  font-size: 0.7rem;
+}
