@@ -101,12 +101,12 @@ The application follows an MVC-inspired architecture by separating presentation,
 <img width="1875" height="924" alt="image" src="https://github.com/user-attachments/assets/a254f7ce-0ff9-46f0-a40a-c35742724a1b" />
 * Registration
 <img width="1876" height="920" alt="image" src="https://github.com/user-attachments/assets/38f9e350-9b05-4a8c-99a0-49a7235c70ef" />
-* Campaign Page
-<img width="1850" height="901" alt="image" src="https://github.com/user-attachments/assets/5e1e8929-ca4f-4d1a-90ed-68e92e226e31" />
+* About Us Page
+<img width="1862" height="906" alt="image" src="https://github.com/user-attachments/assets/b9119ed3-4d59-46fc-9a9c-8210f461cba4" />
+* Donation Page
+<img width="1860" height="907" alt="image" src="https://github.com/user-attachments/assets/4febc7a5-ecc6-4633-a5f8-aa2881ffaba5" />
 * Donation Form
-![Uploading image.png…]()
-
-* User Dashboard
+<img width="1863" height="923" alt="image" src="https://github.com/user-attachments/assets/f68197d6-b730-4058-a7a4-384721cc4b3c" />
 
 ---
 
