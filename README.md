@@ -1,4 +1,4 @@
-#  HelpingHands
+<img width="1859" height="923" alt="image" src="https://github.com/user-attachments/assets/6dcdadc9-2a68-42fa-9f47-a73926b35b13" />#  HelpingHands
 
 > A full-stack donation platform built with **Flask** and **MySQL**, allowing users to securely donate to campaigns, manage their accounts, and track donation history.
 
@@ -95,15 +95,17 @@ The application follows an MVC-inspired architecture by separating presentation,
 
 ##  Screenshots
 
-> Add screenshots here.
-
-Suggested screenshots:
-
 * Landing Page
+<img width="1859" height="923" alt="image" src="https://github.com/user-attachments/assets/0c5763bb-b62f-459e-9043-6563121062d4" />
 * Login
+<img width="1875" height="924" alt="image" src="https://github.com/user-attachments/assets/a254f7ce-0ff9-46f0-a40a-c35742724a1b" />
 * Registration
+<img width="1876" height="920" alt="image" src="https://github.com/user-attachments/assets/38f9e350-9b05-4a8c-99a0-49a7235c70ef" />
 * Campaign Page
+<img width="1850" height="901" alt="image" src="https://github.com/user-attachments/assets/5e1e8929-ca4f-4d1a-90ed-68e92e226e31" />
 * Donation Form
+![Uploading image.png…]()
+
 * User Dashboard
 
 ---
